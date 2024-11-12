@@ -127,3 +127,58 @@ body {
     font-weight: 700;
     font-size: 15px;
 }
+
+/*  features*/
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+#feature .feature-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #a79a12;
+    border-radius: 4px;
+    margin: 15px 0;
+
+}
+#feature .feature-box:hover{
+    box-shadow: 10px 10px 10px 10px rgba(226, 255, 3, 0.5);
+    cursor: pointer;
+}
+
+#feature .feature-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .feature-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #a79a12;
+    background-color: #fddde4;
+}
+#feature .feature-box:nth-child(2) h6{
+    background-color: rgb(253, 127, 255);
+    color: #1a1a1a;
+}
+#feature .feature-box:nth-child(3) h6{
+    background-color: rgb(127, 255, 200);
+}
+#feature .feature-box:nth-child(4) h6{
+    background-color: rgb(127, 206, 255);
+    color: #1a1a1a;
+}
+#feature .feature-box:nth-child(5) h6{
+    background-color: rgb(127, 148, 255);
+    color: #1a1a1a;
+}
+#feature .feature-box:nth-child(6) h6{
+    background-color: rgb(28, 31, 30);
+}
