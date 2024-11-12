@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playfair Display' , lora, sans-serif;
+    font-family: 'Playfair Display', 'Lora', serif, sans-serif;
 }
 h1 {
     font-size: 50px;
@@ -51,6 +51,10 @@ button.normal{
     outline: none;
     transition: 0.2s;
 }
+button.normal:hover {
+    background-color: #f0f0f0;
+    color: #222;
+}
 button.white{
     font-size: 13px;
     font-weight: 600;
@@ -61,6 +65,11 @@ button.white{
     border: 1px solid #fff;
     outline: none;
     transition: 0.2s;
+}
+
+button.white:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 
@@ -78,7 +87,7 @@ body {
     justify-content: space-between;
     padding: 20px 80px;
     background: #E3E6F3;
-    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
     top: 0;
@@ -120,6 +129,10 @@ body {
     left: 20px;
 }
 
+#mobile{
+    display: none;
+    align-items: center;
+}
 /*  Home page*/
 
 #hello{
@@ -146,13 +159,16 @@ body {
 #hello button{
     background-image: url("img/button.png");
     background-color: transparent;
-    color: 'Blush pink';
+    color: #FFC0CB;
     border: 0;
     padding: 14px 80px 14px 65px;
     background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+}
+#close{
+    display: none;
 }
 
 /*  features*/
@@ -492,5 +508,148 @@ footer .copyright{
     text-align: center;
 }
 /*  */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 799px) {
+    .section-p1{
+        padding: 40px 40px;
+    }
+    #navbar{
+        display: flex ;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgb(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+
+    }
+    #navbar.active{
+        right: 0px;
+
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+       color: #1a1a1a;
+       font-size: 24px;
+       padding-left: 20px;
+
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px; 
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    #shopping-bag{
+        display: none;
+    }
+    #hello{
+        height: 90vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+    #feature{
+        justify-content: center;
+
+    }
+    #feature .feature-box{
+        margin: 15px 15px;
+
+    }
+    #product1 .pro-container{
+        justify-content: center;
+
+    }
+
+    #product1 .pro{
+        margin: 15px;
+    }
+    
+    #banner{
+        height: 20vh;
+    }
+    #sm-banner .banner-box{
+        min-width: 100%;
+        height: 30vh;
+    }
+    #banner3{
+        padding: 0 40px;
+    }
+    #banner3 .banner-box{
+        width: 28%;
+    }
+    #newsletter .form{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 477px) {
+    .section-p1 {
+        padding: 20px;
+    }
+    #header { 
+        padding: 10px 30px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    #hello {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    #feature {
+        justify-content: space-between;
+    }
+    #feature .feature-box {
+        width: 155px;
+        margin: 0 0 15px 0 ;
+    }
+    #product1 .pro{
+        margin: 0px;
+        width: 100%;
+    }
+    #banner{
+        height: 40vh;
+    }
+    #sm-banner .banner-box{
+        height: 50vh;
+    }
+    #sm-banner .banner-box2{
+        margin-top: 20px;
+    }
+    #banner3{
+        padding: 0 20px;
+    } 
+    #banner3 .banner-box{
+        width: 100%;
+    }
+    #newsletter{
+        padding: 40 20px;
+    }
+    #newsletter .form{
+        width: 100%;
+    }
+    footer .copyright{
+        text-align: start;
+    }
+
+
+    
+}
 
